@@ -31,7 +31,7 @@
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 500px){
     :root{
         --big-font-size: 10.5rem;
         --h2-font-size: 2rem;
@@ -233,7 +233,7 @@ img{
     bottom: 0;
     width: 295px;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 500px){
     .nav__menu{
         position: fixed;
         top: var(--header-height);
@@ -245,7 +245,21 @@ img{
         transition: .5s;
         backdrop-filter: blur(10px);
     }
-}
+  }
+  @media screen and (max-height: 300px){
+    .nav__menu{
+      position: fixed;
+      top: var(--header-height);
+      right: -100%;
+      width: 80%;
+      height: 100%;
+      padding: 2rem;
+      background-color: rgba(255,255,255,.3);
+      transition: .5s;
+      backdrop-filter: blur(10px);
+    }
+  }
+   
 /* ===== ABOUT =====*/
 #about{
     background-color: var(--first-color);
@@ -392,7 +406,7 @@ img{
 }
 /* ===== GALLERY =====*/
 .xop-section{
-    background: var(--first-color);
+    background: white;
     max-width: 960px;
     margin: 0 auto;
     padding: 6% 2%;
@@ -825,6 +839,12 @@ form {
     font-size: var(--normal-font-size);
     color: white;
     margin-bottom: var(--mb-2);
+}
+.contact_footer .contact-number{
+  color: white;
+}
+.contact_footer .contact-mail{
+  color: white;
 }
 .address{
     color: white;
